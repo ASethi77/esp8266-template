@@ -5,11 +5,7 @@ All those extra configuration steps are manual and error-prone, so a project isn
 
 I also prefer to use C++, even on embedded systems, so using my own template makes it just that little bit easier to wrangle my toolchain.
 
-This template simplifies your job to three easy manual steps:
-
-## Downlaod the ESP8266 GCC toolchain
-
-This is available from here: https://dl.espressif.com/dl/xtensa-lx106-elf-gcc8_4_0-esp-2020r3-win32.zip
+This template simplifies your job to one easy manual step:
 
 ## Create a Python3 virtual environment somewhere
 
@@ -19,13 +15,17 @@ Usually your IDE can do this for you, but a simple option would be to run
 
 to create a `.venv` folder in your cloned repo.
 
-## Update your CMakeUserPresets.json
+From there you can use your cmake preset to configure and build the project,
+and the template will handle pulling down and building the FreeRTOS SDK, as well as the GCC toolchain, for you.
 
-Namely, update this one variable:
-
-1. `XTENSA_TOOLCHAIN_ROOT`: The path where you downloaded the GCC toolchain from above
-
-![image](https://github.com/ASethi77/esp8266-template/assets/7550606/1c52cda9-3d26-4198-929d-6ae0f85391ef)
-
-From there you can use your cmake preset to configure and build, and the template will handle pulling down and building the FreeRTOS sdk for you.
 No shitty python scripts, no MSYS2 junk, no editing your environment variables manually... just pure bliss.
+
+### Example CMake commands (Windows)
+
+To configure:
+
+`cmake.exe --preset xtensa_windows -S E:\aakas\Documents\Code\esp8266_temp_controller -B E:\aakas\Documents\Code\esp8266_temp_controller\build\default`
+
+To build:
+
+`cmake.exe --build --target esp8266_template.elf --preset xtensa_build_windows`

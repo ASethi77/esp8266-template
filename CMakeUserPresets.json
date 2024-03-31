@@ -5,31 +5,10 @@
     "minor": 23,
     "patch": 0
   },
-  "configurePresets": [
-    {
-      "name": "xtensa_windows_asethi",
-      "inherits": "xtensa_base",
-      "displayName": "ESP8266 GCC (Windows Host)",
-      "condition": {
-        "type": "equals",
-        "lhs": "${hostSystemName}",
-        "rhs": "Windows"
-      },
-      "cacheVariables": {
-        "Python3_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python.exe",
-        "PYTHON_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python.exe",
-        "PYTHON": "$env{VIRTUAL_ENV}/Scripts/python.exe",
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
-      },
-      "environment": {
-        "VIRTUAL_ENV": "${sourceDir}/.venv"
-      }
-    }
-  ],
   "buildPresets": [
     {
-      "name": "xtensa_build",
-      "configurePreset": "xtensa_windows_asethi",
+      "name": "xtensa_build_windows",
+      "configurePreset": "xtensa_windows",
       "inheritConfigureEnvironment": true,
       "environment": {
         "PATH": "$env{VIRTUAL_ENV}/Scripts:$penv{PATH}",

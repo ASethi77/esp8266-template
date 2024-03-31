@@ -22,6 +22,15 @@
         "type": "equals",
         "lhs": "${hostSystemName}",
         "rhs": "Windows"
+      },
+      "cacheVariables": {
+        "Python3_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python.exe",
+        "PYTHON_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python.exe",
+        "PYTHON": "$env{VIRTUAL_ENV}/Scripts/python.exe",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      },
+      "environment": {
+        "VIRTUAL_ENV": "${sourceDir}/.venv"
       }
     },
     {
@@ -32,6 +41,15 @@
         "type": "equals",
         "lhs": "${hostSystemName}",
         "rhs": "Linux"
+      },
+      "cacheVariables": {
+        "Python3_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python",
+        "PYTHON_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python",
+        "PYTHON": "$env{VIRTUAL_ENV}/Scripts/python",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      },
+      "environment": {
+        "VIRTUAL_ENV": "${sourceDir}/.venv"
       }
     }
   ]
