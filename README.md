@@ -1,7 +1,9 @@
-# Quickstart CMake template for ESP8266 boards.
+# Quickstart C++ CMake template for ESP8266 boards.
 
 The ESP8266 FreeRTOS SDK is a nice baseline project setup, however I hate the fact that to use it I have to first pollute my environment variables manually with GCC and FreeRTOS SDK paths.
 All those extra configuration steps are manual and error-prone, so a project isn't quite portable to the point where you can just rebuild on any machine with the push of a button.
+
+I also prefer to use C++, even on embedded systems, so using my own template makes it just that little bit easier to wrangle my toolchain.
 
 This template simplifies your job to three easy manual steps:
 
