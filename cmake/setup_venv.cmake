@@ -12,11 +12,8 @@ function(setup_venv)
     endif()
 
     execute_process(
-#            COMMAND ". ${VENV_ARGS_VENV_ROOT}/Scripts/Activate.ps1"
             COMMAND ${Python3_EXECUTABLE} "-m" "pip" "install" "-r" "${VENV_ARGS_REQUIREMENTS_PATH}" "--upgrade"
             COMMAND_ECHO STDOUT
             COMMAND_ERROR_IS_FATAL ANY
     )
-
-#    set(Python3_EXECUTABLE "${VENV_ARGS_VENV_ROOT}/Scripts/python.exe")
 endfunction()

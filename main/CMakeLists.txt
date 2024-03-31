@@ -1,1 +1,1 @@
-idf_component_register(SRCS "esp8266_temp_controller_main.cpp")
+idf_component_register(SRCS "esp8266_template.cpp")

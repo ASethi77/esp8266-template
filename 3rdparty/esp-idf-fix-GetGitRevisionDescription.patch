@@ -1,0 +1,13 @@
+diff --git a/tools/cmake/third_party/GetGitRevisionDescription.cmake b/tools/cmake/third_party/GetGitRevisionDescription.cmake
+index 1de63b36..d73a0983 100644
+--- a/tools/cmake/third_party/GetGitRevisionDescription.cmake
++++ b/tools/cmake/third_party/GetGitRevisionDescription.cmake
+@@ -40,7 +40,7 @@ set(__get_git_revision_description YES)
+ 
+ # We must run the following at "include" time, not at function call time,
+ # to find the path to this module rather than the path to a calling list file
+-get_filename_component(_gitdescmoddir ${CMAKE_CURRENT_LIST_FILE} PATH)
++get_filename_component(_gitdescmoddir ${CMAKE_CURRENT_LIST_FILE} PATH CACHE)
+ 
+ function(get_git_head_revision _refspecvar _hashvar _repo_dir)
+     set(GIT_PARENT_DIR "${_repo_dir}")

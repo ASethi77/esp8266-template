@@ -22,9 +22,6 @@
         "type": "equals",
         "lhs": "${hostSystemName}",
         "rhs": "Windows"
-      },
-      "environment": {
-        "XTENSA_TOOLCHAIN_ROOT": "C:\\xtensa-lx106-elf"
       }
     },
     {
@@ -35,9 +32,6 @@
         "type": "equals",
         "lhs": "${hostSystemName}",
         "rhs": "Linux"
-      },
-      "environment": {
-        "XTENSA_TOOLCHAIN_ROOT": "/opt/xtensa-lx106-elf"
       }
     }
   ]

@@ -7,7 +7,7 @@ This template simplifies your job to three easy manual steps:
 
 ## Downlaod the ESP8266 GCC toolchain
 
-This is available from here: https://dl.espressif.com/dl/esp32_win32_msys2_environment_and_toolchain-20181001.zip
+This is available from here: https://dl.espressif.com/dl/xtensa-lx106-elf-gcc8_4_0-esp-2020r3-win32.zip
 
 ## Create a Python3 virtual environment somewhere
 
@@ -25,4 +25,5 @@ Namely, update this one variable:
 
 ![image](https://github.com/ASethi77/esp8266-template/assets/7550606/1c52cda9-3d26-4198-929d-6ae0f85391ef)
 
-From there you can use your cmake preset to configure and build, and the template will handle pulling down and building the FreeRTOS sdk for you. No shitty python scripts, no editing your environment variables manually... just pure bliss.
+From there you can use your cmake preset to configure and build, and the template will handle pulling down and building the FreeRTOS sdk for you.
+No shitty python scripts, no MSYS2 junk, no editing your environment variables manually... just pure bliss.

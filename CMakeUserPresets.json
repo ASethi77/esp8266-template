@@ -19,11 +19,10 @@
         "Python3_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python.exe",
         "PYTHON_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python.exe",
         "PYTHON": "$env{VIRTUAL_ENV}/Scripts/python.exe",
-        "EXPORT_COMPILE_COMMANDS": true
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
       },
       "environment": {
-        "VIRTUAL_ENV": "${sourceDir}/.venv",
-        "XTENSA_TOOLCHAIN_ROOT": "E:/aakas/Documents/Code/embedded_toolchains/esp8266/xtensa-lx106-elf"
+        "VIRTUAL_ENV": "${sourceDir}/.venv"
       }
     }
   ],
