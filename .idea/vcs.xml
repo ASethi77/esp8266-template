@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp-idf-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp-idf-src/components/coap/libcoap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp-idf-src/components/coap/libcoap/ext/tinydtls" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp-idf-src/components/json/cJSON" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp-idf-src/components/lwip/lwip" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp-idf-src/components/mbedtls/mbedtls" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp-idf-src/components/mqtt/esp-mqtt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp8266_rtos_sdk-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp8266_rtos_sdk-src/components/coap/libcoap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp8266_rtos_sdk-src/components/coap/libcoap/ext/tinydtls" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp8266_rtos_sdk-src/components/json/cJSON" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp8266_rtos_sdk-src/components/lwip/lwip" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp8266_rtos_sdk-src/components/mbedtls/mbedtls" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/default/_deps/esp8266_rtos_sdk-src/components/mqtt/esp-mqtt" vcs="Git" />
+  </component>
+</project>

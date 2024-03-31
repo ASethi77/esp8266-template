@@ -1,0 +1,41 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "xtensa_windows_asethi",
+      "inherits": "xtensa_base",
+      "displayName": "ESP8266 GCC (Windows Host)",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "cacheVariables": {
+        "Python3_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python.exe",
+        "PYTHON_EXECUTABLE": "$env{VIRTUAL_ENV}/Scripts/python.exe",
+        "PYTHON": "$env{VIRTUAL_ENV}/Scripts/python.exe",
+        "EXPORT_COMPILE_COMMANDS": true
+      },
+      "environment": {
+        "VIRTUAL_ENV": "${sourceDir}/.venv",
+        "XTENSA_TOOLCHAIN_ROOT": "E:/aakas/Documents/Code/embedded_toolchains/esp8266/xtensa-lx106-elf"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "xtensa_build",
+      "configurePreset": "xtensa_windows_asethi",
+      "inheritConfigureEnvironment": true,
+      "environment": {
+        "PATH": "$env{VIRTUAL_ENV}/Scripts:$penv{PATH}",
+        "IDF_PATH": "${sourceDir}/build/default/_deps/esp8266_rtos_sdk-src"
+      }
+    }
+  ]
+}

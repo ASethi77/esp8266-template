@@ -1,0 +1,44 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "xtensa_base",
+      "hidden": true,
+      "displayName": "ESP8266 GCC",
+      "description": "Default build using Ninja generator and Xtensa GCC cross-compiler",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/default"
+    },
+    {
+      "name": "xtensa_windows",
+      "inherits": "xtensa_base",
+      "displayName": "ESP8266 GCC (Windows Host)",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "environment": {
+        "XTENSA_TOOLCHAIN_ROOT": "C:\\xtensa-lx106-elf"
+      }
+    },
+    {
+      "name": "xtensa_linux",
+      "inherits": "xtensa_base",
+      "displayName": "ESP8266 GCC (Linux Host)",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      },
+      "environment": {
+        "XTENSA_TOOLCHAIN_ROOT": "/opt/xtensa-lx106-elf"
+      }
+    }
+  ]
+}
